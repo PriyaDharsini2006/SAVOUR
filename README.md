@@ -31,12 +31,12 @@ git clone https://github.com/PriyaDharsini2006/SAVOUR.git
 cd SAVOUR
 Install Dependencies
 Run the App
+.env.local file:
+Supabase credentials
+OAuth credentials for NextAuth
 👏 Contribute
 We welcome contributions to make this platform even better! Please submit a pull request or report issues for any improvements or bugs.
 ```bash
 npm install
-Configure Environment Variables: Set up your environment variables in a .env.local file for:
-Supabase credentials
-OAuth credentials for NextAuth
 npm run dev
 
