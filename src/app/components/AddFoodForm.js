@@ -124,7 +124,7 @@ export default function AddFoodForm({ onItemAdded }) {
         <h2 className="text-3xl font-semibold text-black mb-6">Add New Food Item</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
+            <div className=''>
               <label className="block text-lg font-medium text-gray-700">
                 Name
               </label>
@@ -134,7 +134,7 @@ export default function AddFoodForm({ onItemAdded }) {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="mt-1 block w-full text-black rounded-md border border-gray-300 px-40 py-5 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
+                className="mt-1 block w-full text-black rounded-md border border-gray-300 px-4 py-5 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500"
               />
             </div>
             <div>

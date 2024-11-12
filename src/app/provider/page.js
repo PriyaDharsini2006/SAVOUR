@@ -11,6 +11,7 @@ function Home() {
   };
 
   const [foodItems, setFoodItems] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(''); // State for search query
 
   useEffect(() => {
     fetchFoodItems();
@@ -89,8 +90,16 @@ function Home() {
     }
   }
 
+  // Filter food items based on search query
+  const filteredItems = foodItems.filter(item =>
+    item.address && item.address.toLowerCase().includes(searchQuery.toLowerCase())
+    || item.name && item.name.toLowerCase().includes(searchQuery.toLowerCase())
+    || item.quantity && item.quantity.toString().includes(searchQuery)
+
+  );
+
   return (
-    <div className= " bg-gray-100">
+    <div className= "bg-gray-100">
       <nav className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white fixed w-full shadow-lg z-10">
         <div className="flex items-center justify-between max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <h1 className="text-2xl font-bold">Food Waste Management</h1>
@@ -100,19 +109,28 @@ function Home() {
           >
             Back
           </button>
-          
         </div>
       </nav>
 
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px- pt-24 pb-10">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">Available Food Items</h2>
+
+          {/* Search input field */}
+          <div className="mb-6 text-center">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search"
+              className="w-full sm:w-1/2 p-2 border rounded-md"
+            />
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {foodItems.map((item) => (
-            
+            {filteredItems.map((item) => (
               <FoodItemCard key={item.id} item={item} />
-              
-              ))}
+            ))}
           </div>
         </div>
       </div>
@@ -136,6 +154,7 @@ function Home() {
         />
       </div>
     </div>
-  );}
+  );
+}
 
 export default Home;
