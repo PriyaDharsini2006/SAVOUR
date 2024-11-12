@@ -35,10 +35,10 @@ const SignInPage = () => {
     >
       <div className="bg-white bg-opacity-30 backdrop-blur-sm shadow-lg rounded-lg p-6 sm:p-8 md:p-12 lg:p-16 text-center w-full max-w-md mx-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 sm:mb-6">
-          Welcome Back
+          Welcome Back To Savour
         </h1>
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-black mb-6 sm:mb-8">
-          Sign in to access your account and manage your profile.
+          Sign in to access your account.
         </p>
         {status !== 'loading' && !session ? (
           <button
