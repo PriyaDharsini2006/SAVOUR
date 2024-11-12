@@ -39,4 +39,7 @@ We welcome contributions to make this platform even better! Please submit a pull
 ```bash
 npm install
 npm run dev
+npm install next-auth
+npm install lucid-react
+npm install supabase
 
