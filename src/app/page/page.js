@@ -303,7 +303,7 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6 lg:space-x-9">
                 <Link href="/user">
                   <button className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 sm:py-4 lg:py-5 px-6 sm:px-8 lg:px-9 rounded-lg shadow transition-colors duration-300 text-sm sm:text-base">
-                    I'm Ready to Donate
+                    I am Ready to Donate
                   </button>
                 </Link>
 
