@@ -8,12 +8,14 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET,  // Ensure this is set for session security
-  session: {
-    strategy: 'jwt',
-    maxAge: 30 * 24 * 60 * 60, 
-  },
+  secret: process.env.NEXTAUTH_SECRET, 
+  pages: {
+    signIn: '/sign', // Custom sign-in page
+    error: '/error',    // Custom error page
+    signOut: '/logout', // Custom sign-out page
+  }, // Ensure this is set for session security
   callbacks: {
+
     async session({ session, token }) {
       // You can add user information to the session object here if needed
       session.user.id = token.sub;
@@ -28,11 +30,10 @@ export const authOptions = {
       return token;
     },
   },
-  pages: {
-    signIn: '/signin', // Custom sign-in page
-    error: '/error',    // Custom error page
-    signOut: '/signout', // Custom sign-out page
-  },};
+  session: {
+    strategy: 'jwt',
+  },
+  };
 
 const handler = NextAuth(authOptions);
 
