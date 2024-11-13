@@ -6,11 +6,6 @@ export const authOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      authorization: {
-        params: {
-          redirect_uri: 'https://savour-one.vercel.app/api/auth/callback/google',
-        },
-      },
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,  // Ensure this is set for session security

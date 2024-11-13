@@ -213,7 +213,7 @@ export default function BillPage() {
     <div
       className="min-h-screen bg-gray-50 item-center justify-center py-12"
       style={{
-        backgroundImage: "url('/pexels-shvetsa-3645504.jpg')",
+        // backgroundImage: "url('/pexels-shvetsa-3645504.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
