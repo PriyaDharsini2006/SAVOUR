@@ -31,7 +31,8 @@ export const authOptions = {
     },
   },
   session: {
-    strategy: 'jwt',
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // Session expiration: 30 days
   },
   };
 
