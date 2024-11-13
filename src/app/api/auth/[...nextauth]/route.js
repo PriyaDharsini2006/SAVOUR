@@ -11,9 +11,9 @@ export const authOptions = {
   secret: process.env.NEXTAUTH_SECRET,  // Ensure this is set for session security
   session: {
     strategy: 'jwt',
+    maxAge: 30 * 24 * 60 * 60, 
   },
   callbacks: {
-  
     async session({ session, token }) {
       // You can add user information to the session object here if needed
       session.user.id = token.sub;
@@ -29,9 +29,9 @@ export const authOptions = {
     },
   },
   pages: {
-    signIn: '/auth/signin', // Custom sign-in page
-    error: '/auth/error',    // Custom error page
-    signOut: '/auth/signout', // Custom sign-out page
+    signIn: '/signin', // Custom sign-in page
+    error: '/error',    // Custom error page
+    signOut: '/signout', // Custom sign-out page
   },};
 
 const handler = NextAuth(authOptions);
