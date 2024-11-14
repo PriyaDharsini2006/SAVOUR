@@ -23,7 +23,7 @@ Database and Storage: Supabase for managing data and storing food item images
 Chatbot: Custom fine-tuned model focused on food waste management, offering guidance and support for users
 🤖 AI-Powered Chatbot
 We've built a chatbot specifically trained on food waste management to assist users with any questions they might have. Whether it’s guidance on food donation or tips to reduce waste, our chatbot is here to help!
-
+ dockerized the app
 📂 Setup Instructions
 Clone the Repository
 Install Dependencies
