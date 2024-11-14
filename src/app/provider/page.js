@@ -17,8 +17,8 @@ function Home() {
   useEffect(() => {
     fetchFoodItems();
     checkExpiredItems();
-    const interval = setInterval(checkExpiredItems, 1000 * 60 * 60 * 24); // Check every 5 minutes
-    return () => clearInterval(interval);
+    //  const interval = setInterval(checkExpiredItems,1000*60*60*24); // Check every 24 minutes
+    // return () => clearInterval(interval);
   }, []);
 
   async function fetchFoodItems() {
