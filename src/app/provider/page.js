@@ -32,6 +32,7 @@ function Home() {
 
       const itemsWithImageUrls = await Promise.all(
         data.map(async (item) => {
+          
           if (item.image_path) {
             const { data: publicUrl } = supabase.storage
               .from('food-images')
@@ -41,7 +42,7 @@ function Home() {
           return item;
         })
       );
-
+     
       setFoodItems(itemsWithImageUrls);
     } catch (error) {
       console.error('Error fetching food items:', error.message);
