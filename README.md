@@ -1,4 +1,4 @@
-Check it out here https://savour-one.vercel.app/
+
 
 🍲Food Excess - A Food Waste Management Platform
 Join us in the fight against food waste. Manage surplus food, prevent it from going to waste, and help those in need. Food Excess is a platform that connects people with surplus food to individuals or organizations in need. Whether you're ready to donate or in need of food provisions, our app provides a seamless experience to make the best use of excess food.
