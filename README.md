@@ -45,3 +45,12 @@ npm install next-auth
 npm install lucid-react
 npm install supabase
 
+.env.example
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+DATABASE_URL=your_database_url
+NEXTAUTH_SECRET=your_secret
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+NEXTAUTH_URL=http://localhost:3000
+
